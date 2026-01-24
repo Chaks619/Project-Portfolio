@@ -46,45 +46,6 @@ export default function HomePage() {
           </Button>
         </div>
       </motion.section>
-
-      <div className="h-px w-full bg-gradient-to-r from-transparent via-border to-transparent my-16" />
-
-      {/* PROJECTS SECTION */}
-      <motion.section
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
-        variants={fadeUp}
-        className="space-y-10 pt-24"
-      >
-        <div className="space-y-2">
-          <h2 className="text-3xl font-bold">Projects</h2>
-          <p className="text-muted-foreground max-w-xl">
-            A collection of projects I’ve built — each focused on solving
-            practical problems and exploring modern web technologies.
-          </p>
-        </div>
-
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {projects.map((project, index) => (
-            <motion.div
-              key={project.slug}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{
-                duration: 0.5,
-                ease: "easeOut",
-                delay: index * 0.08,
-              }}
-            >
-              <ProjectCard project={project} />
-            </motion.div>
-          ))}
-        </div>
-      </motion.section>
-      <BackToTop />
     </div>
     
   )

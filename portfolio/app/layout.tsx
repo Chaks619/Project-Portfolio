@@ -20,7 +20,6 @@ export default function RootLayout({
             <ContactFooter />
             <Toaster richColors position="bottom-right" />
           </ThemeProvider>
-          
         </TooltipProvider>
       </body>
     </html>
